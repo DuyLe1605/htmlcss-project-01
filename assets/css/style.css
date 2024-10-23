@@ -570,11 +570,12 @@ a {
 }
 
 .footer .item a {
-    margin-top: 2.1rem;
+    margin-top: 1.8rem;
     color: #7a7a7e;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: normal;
+    display: inline-block;
 }
 
 .footer .desc {
