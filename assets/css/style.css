@@ -6,6 +6,10 @@
     --primary-color: #0f1b4c;
 }
 
+*,
+html {
+    scroll-behavior: smooth !important;
+}
 html {
     font-size: 62.5%;
 }
@@ -58,7 +62,7 @@ a {
 }
 
 .hero-wrap {
-    height: 100vh;
+    height: calc(100vh - 9rem);
     background-color: #e6f0ff;
 }
 .navbar {
