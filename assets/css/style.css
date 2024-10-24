@@ -62,6 +62,9 @@ a {
 }
 
 .hero-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: calc(100vh - 9rem);
     background-color: #e6f0ff;
 }
@@ -103,9 +106,6 @@ a {
 }
 
 /* Hero */
-.hero {
-    padding-top: 130px;
-}
 
 .hero .info {
     width: 51%;
