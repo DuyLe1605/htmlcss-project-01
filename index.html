@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Project 1</title>
-
         <!-- Favicon -->
         <link
             rel="apple-touch-icon"
@@ -86,23 +85,47 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="./assets/css/responsive.css
+        "
+        />
     </head>
     <body>
+        <!-- PC Header -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- Tablet/ Mobile -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            /></svg
+                    ></label>
                     <!-- Logo -->
                     <a href="#"
-                        ><img src="./assets/img/Logo.svg" alt="Besnik."
+                        ><img
+                            class="logo"
+                            src="./assets/img/Logo.svg"
+                            alt="Besnik."
                     /></a>
 
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pc-nav">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#featured">Features</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <div class="mobile-action" hidden>
+                            <li><a href="#sign-in">Sign in</a></li>
+                            <li><a href="#sign-up">Sign up</a></li>
+                        </div>
                     </ul>
                     <!-- Actions -->
                     <div class="actions">
@@ -112,7 +135,46 @@
                 </nav>
             </div>
         </header>
-        <!-- Header -->
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <!-- Checkbox -->
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#"
+                    ><img src="./assets/img/Logo.svg" alt="Besnik."
+                /></a>
+                <!-- Navigation -->
+                <ul id="mobile-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#mobile-nav");
+                    //
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
+                <!-- Mobile x btn -->
+                <label for="menu-checkbox" class="menu-close"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+                        /></svg
+                ></label>
+            </div>
+        </header>
+
         <main id="home">
             <div class="hero-wrap">
                 <div class="content">
@@ -268,7 +330,7 @@
                             <p class="desc">
                                 Everything you need to know when you're looking
                             </p>
-                            <a href="#!" class="link"
+                            <a href="#!" class="link hide-on-mobile"
                                 ><span>View All Properties</span>
                                 <img
                                     src="./assets/img/Guide-Arrow.svg"
@@ -407,6 +469,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="view-all show-on-mobile">
+                        <a href="#!" class="btn">View All Properties</a>
                     </div>
                 </div>
             </div>
@@ -693,7 +758,11 @@
 
                 <!-- row bottom -->
                 <div class="row row-bottom">
-                    <img src=".//assets/img/Logo.svg" alt="" class="logo" />
+                    <img
+                        src=".//assets/img/Logo.svg"
+                        alt=""
+                        class="footer-logo"
+                    />
                     <p class="copyright">
                         Copyright 2020.com, All rights reserved.
                     </p>

@@ -310,7 +310,8 @@ a {
 }
 
 .featured .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 7rem;
 }
@@ -610,6 +611,7 @@ a {
     padding: 0;
     margin-top: 8.1em;
     align-items: center;
+    display: flex;
 }
 
 .footer .copyright {
